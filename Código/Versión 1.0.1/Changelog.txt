@@ -1,0 +1,2 @@
+- Borrada la función process_counter de gestor.c y gestor.h
+- Cambiado aumentar_contador por increase_counter y decrementar_contador por decrease_counter, para que todas las funciones del gestor estén en inglés. Aplicado en gestor.c, gestor.h y exit.c.

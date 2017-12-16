@@ -1,0 +1,10 @@
+- Añadido que en add_to_queue() se sume 1 a los contadores según tipo de proceso.
+- Añadido que en kill_process() se reste 1 a los contadores según tipo de proceso.
+- Añadido check_time() que comprueba si un proceso ha excedido el tiempo en CPU.
+- Añadido process_counter() que una vez llamado recorre la lista de procesos y cuenta los procesos de cada tipo existentes.
+
+- En kill_process() ponia "kill_pid(find_vpid(proceso->pid), SIGKILL, 1);". Cambiado ese "proceso" por "tsk".
+
+Dudas: ¿Cúando y donde hay que llamar a process_counter() ahora que hacemos lo de sumar uno cuando se encola y restar uno cuando se mata?
+¿Hay que llamar a check_time() en admin() o solo en scheduler_tick()?
+Echad un ojo a los cambios en esta v2 y decidme si hay algo mal. Gracias!
